@@ -1,0 +1,83 @@
+﻿<Window x:Class="EmsMessageInjector.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EmsMessageInjector"
+        mc:Ignorable="d"
+        Title="EMS Message Injector" Height="350" Width="525">
+    <Grid>
+        <GroupBox 
+            x:Name="gbConfiguration"
+            Header="Configuration"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Height="79"
+            Width="262"
+            Margin="10,-2,0,0"/>
+        <Label 
+            x:Name="lblEnvironment"
+            Content="Environment"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="20,10,0,0"/>
+        <ComboBox
+            x:Name="cbEnvironments"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="20,36,0,0"
+            Height="20"
+            Width="120"
+            Loaded="cbEnvironments_Loaded"
+            SelectionChanged="cbEnvironments_SelectionChanged"/>
+        <ComboBox
+            x:Name="cbQueues"
+            HorizontalAlignment="Left"
+            Margin="145,36,0,264.4"
+            Height="20"
+            Width="120"/>
+        <Label
+            x:Name="lbQueues"
+            Content="Queues"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="145,10,0,0"/>
+        <GroupBox
+            x:Name="gbMessageDetails"
+            Header="Message Details"
+            HorizontalAlignment="Left"
+            Margin="10,80,0,0"
+            VerticalAlignment="Top"
+            Height="232"
+            Width="498" />
+        <TextBlock
+            x:Name="txtbMessageInput"
+            HorizontalAlignment="Left"
+            Margin="20,101,0,0"
+            TextWrapping="Wrap"
+            Text="Enter Message"
+            VerticalAlignment="Top"
+            Height="164"
+            Width="477"/>
+        <Label
+            x:Name="lblStatus"
+            Content="Status"
+            HorizontalAlignment="Left"
+            Margin="276,6,0,0"
+            VerticalAlignment="Top"/>
+        <TextBox
+            x:Name="txtStatus"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="319,10,0,0"
+            Text="Not Submitted"
+            Width="138" />
+        <Button
+            x:Name="btnSubmit"
+            Content="Submit Message"
+            HorizontalAlignment="Left"
+            Margin="277,36,0,0"
+            VerticalAlignment="Top"
+            Width="Auto"/>
+    </Grid>
+</Window>
